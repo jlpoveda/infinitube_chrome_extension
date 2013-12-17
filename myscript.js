@@ -1,14 +1,15 @@
 function getVideoid() {
-    var links = document.getElementsByTagName('link');
-    for (i=0; i<links.length; i++) {
-        if (links[i].getAttribute("rel") == "shortlink") {
-            return links[i].getAttribute("href").replace('http://youtu.be/', '');
+    var metas = document.getElementsByTagName('meta');
+    for (i=0; i<metas.length; i++) {
+        if (metas[i].getAttribute("itemprop") == "videoId") {
+            return metas[i].getAttribute("content");
         }
     }
     return false;
 }
 function loadImg() {
     var videoId = getVideoid();
+    console.log(videoId);
     if (false != videoId && document.title.indexOf("YouTube") != -1) {
         var objDiv = document.getElementById("eow-title");
         var newImage = document.createElement("img");

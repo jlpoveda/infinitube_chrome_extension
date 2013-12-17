@@ -1,11 +1,11 @@
 {
-"name":"Inject DOM",
-"description":"http://stackoverflow.com/questions/14068879",
+"name":"Play on Infinitube",
+"description":"infinitube.com",
 "version":"1",
 "manifest_version":2,
 "content_scripts": [
     {
-      "matches": ["http://www.google.co.in/*","https://www.google.co.in/*"],
+      "matches": ["http://www.youtube.com/watch*"],
       "js": ["myscript.js"]
     }
   ]

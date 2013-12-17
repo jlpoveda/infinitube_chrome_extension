@@ -6,7 +6,8 @@
 "content_scripts": [
     {
       "matches": ["http://www.youtube.com/watch*"],
-      "js": ["myscript.js"]
+      "js": ["myscript.js"],
+      "run_at": "document_end"
     }
   ]
 }

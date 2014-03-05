@@ -5,7 +5,7 @@
 "manifest_version":2,
 "content_scripts": [
     {
-      "matches": ["*youtube.com/watch*"],
+      "matches": ["*://www.youtube.com/watch*"],
       "js": ["myscript.js"],
       "run_at": "document_end"
     }
